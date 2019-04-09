@@ -1,0 +1,9 @@
+Troubleshooting an issue with web pages failing to load
+
+1. Check the network interface configuration (ifconfig) or IP addressing (ip addr) - ensure that IP address and subnet mask are configured and valid. It appears they are.
+2. Try pinging a URL (for example, github.com). This is successful from my client.
+3. If that fails, check the server's DNS records (cat /etc/resolv.conf): this file will list the DNS servers configured, in this case 10.0.0.201 and 10.0.0.247   Try pinging these addresses. In my case, it fails!
+4. It appears that both configured DNS servers for this environment are unreachable. Further troubleshooting should be done to determine:
+  -whether they are shut down
+  -whether they are not available on the network
+-whether the DNS service is running
