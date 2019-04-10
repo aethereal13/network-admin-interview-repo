@@ -6,4 +6,5 @@ Troubleshooting an issue with web pages failing to load
 4. It appears that both configured DNS servers for this environment are unreachable. Further troubleshooting should be done to determine:
   -whether they are shut down
   -whether they are not available on the network
--whether the DNS service is running
+  -whether there is some firewall rule that is blocking communication
+  -whether the DNS service is running
